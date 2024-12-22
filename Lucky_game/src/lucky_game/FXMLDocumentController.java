@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.image.ImageView;
 
 /**
  *
@@ -18,7 +20,6 @@ import javafx.scene.control.Label;
  */
 public class FXMLDocumentController implements Initializable {
     
-    @FXML
     private Label label;
     @FXML
     private Button btn_log_in;
@@ -26,6 +27,8 @@ public class FXMLDocumentController implements Initializable {
     private Label e_invalid;
     @FXML
     private Label btn_sign_up;
+    @FXML
+    private ImageView cover_img;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -35,6 +38,8 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        GaussianBlur blur = new GaussianBlur(10);
+        cover_img.setEffect(blur);
     }    
     
 }

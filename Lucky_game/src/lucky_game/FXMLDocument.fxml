@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="330.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lucky_game.FXMLDocumentController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="535.0" style="-fx-background-image: url('/image_res/cover.jpg');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lucky_game.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Label layoutX="255.0" layoutY="70.0" text="User Login ">
-         <font>
-            <Font name="System Bold Italic" size="21.0" />
-         </font>
-      </Label>
-      <TextField layoutX="227.0" layoutY="137.0" />
-      <TextField layoutX="227.0" layoutY="177.0" />
-      <Button fx:id="btn_log_in" layoutX="262.0" layoutY="250.0" mnemonicParsing="false" text="Log in" />
-      <Label layoutX="161.0" layoutY="141.0" text="Email" />
-      <Label layoutX="161.0" layoutY="181.0" text="Password" />
-      <Label fx:id="e_invalid" layoutX="236.0" layoutY="214.0" textFill="#c70b0b">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="222.0" layoutY="286.0" text="Don't have an account?" />
-      <Label fx:id="btn_sign_up" layoutX="356.0" layoutY="286.0" style="-fx-underline: true; -fx-cursor: hand;" text="Sign up">
-         <font>
-            <Font name="System Italic" size="12.0" />
-         </font>
-      </Label>
+      <ImageView fx:id="cover_img" fitHeight="340.0" fitWidth="536.0" pickOnBounds="true" style="-fx-effect: &quot;gaussian-blur(10)&quot;;">
+         <image>
+            <Image url="@image_res/cover.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Pane layoutX="135.0" layoutY="54.0" prefHeight="244.0" prefWidth="265.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="82.0" layoutY="12.0" text="User Login ">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <TextField layoutX="82.0" layoutY="62.0" />
+            <Label layoutX="37.0" layoutY="66.0" text="Email" />
+            <Label layoutX="26.0" layoutY="114.0" text="Password" />
+            <TextField layoutX="82.0" layoutY="110.0" />
+            <Button fx:id="btn_log_in" layoutX="112.0" layoutY="166.0" mnemonicParsing="false" text="Log in" />
+            <Label fx:id="e_invalid" layoutX="82.0" layoutY="142.0" textFill="#c70b0b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="203.0" text="Don't have an account?" />
+            <Label fx:id="btn_sign_up" layoutX="172.0" layoutY="203.0" style="-fx-underline: true; -fx-cursor: hand;" text="Sign up">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
